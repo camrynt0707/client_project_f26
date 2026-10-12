@@ -1,0 +1,221 @@
+/* Skip to main content */
+header {
+    position: relative;
+}
+
+.skip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.skip a {
+    position: absolute;
+    top: -200px;
+    right: 0;
+    width: max-content;
+    padding: 0.5rem;
+    color: #fff;
+    background-color: #00274C;
+}
+
+.skip a:focus {
+    top: 0;
+}
+
+
+/* General rules */
+* img {
+    max-width: 100%;
+}
+
+* iframe {
+    max-width: 100%;
+}
+
+* hr {
+    border: none;
+    border-top: 3px solid #00274C;
+}
+
+* {
+    font-family: "Merriweather", serif;
+}
+
+* a {
+    font-weight: bold;
+    color: #00274C;
+}
+
+* a:hover, * a:focus {
+    color: #FFCB05;
+}
+
+
+/* Mobile styling */
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    row-gap: 20px;
+    padding: 20px 0 0 0;
+    background-color: #00274C;
+}
+
+header img {
+    grid-column: 1;
+    grid-row: 1;
+    width: 70%;
+}
+
+header h1 {
+    grid-column: 2 / -1;
+    grid-row: 1;
+    align-self: center;
+    justify-self: start;
+    margin: 0;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+header nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav li {
+    display: flex;
+    flex: 1;
+}
+
+header nav a {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 3px solid #FFCB05;
+}
+
+header nav li.selected a {
+    color: #00274C;
+    background-color: #FFFFFF;
+    border: 3px solid #FFCB05;
+    border-bottom: none;
+}
+
+header nav li.selected:first-child a {
+    border-left: none;
+}
+
+header nav li.selected:last-child a {
+    border-right: none;
+}
+
+
+/* Home */
+.home-page main {
+    color: #00274C;
+    padding: 1.5rem;
+}
+
+.home-page main * {
+    margin-bottom: 1rem; 
+}
+
+.home-page h2 {
+    font-size: 1.5rem;
+}
+
+.home-page .intro {
+
+}
+
+.home-page section:not(:first-child) {
+    border-top: 3px solid #00274C;
+    padding-top: 1.5rem;
+}
+
+.home-page .benefits ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    list-style: none;
+}
+
+.home-page .benefits li {
+    background-color: #FFCB05;
+    padding: 1rem;
+    margin: 0;
+}
+
+
+/* Preparing for your experience */
+.prep-page main {
+    color: #00274C;
+    padding: 1.5rem;
+}
+
+.prep-page main * {
+    margin-bottom: 1rem; 
+}
+
+.prep-page h2 {
+    font-size: 1.5rem;
+}
+
+
+/* During your experience */
+.during-page main {
+    color: #00274C;
+    padding: 1.5rem;
+}
+
+.during-page main * {
+    margin-bottom: 1rem; 
+}
+
+.during-page h2 {
+    font-size: 1.5rem;
+}
+
+/* Wrap-up, Impact, & Next Steps */
+.wrapup-page main {
+    color: #00274C;
+    padding: 1.5rem;
+}
+
+.wrapup-page main * {
+    margin-bottom: 1rem; 
+}
+
+.wrapup-page h2 {
+    font-size: 1.5rem;
+}
+
+
+/* Footer */
+footer {
+    display: grid;
+    color: #FFFFFF;
+    background-color: #00274C;
+    padding: 1rem;
+}
+
+footer a {
+    color: #FFCB05;
+}
