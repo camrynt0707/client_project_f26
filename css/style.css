@@ -40,7 +40,7 @@ header {
 }
 
 * {
-    font-family: "Merriweather", serif;
+    font-family: "Nunito Sans", sans-serif;
 }
 
 * a {
@@ -141,10 +141,6 @@ header nav li.selected:last-child a {
     font-size: 1.5rem;
 }
 
-.home-page .intro {
-
-}
-
 .home-page section:not(:first-child) {
     border-top: 3px solid #00274C;
     padding-top: 1.5rem;
@@ -161,6 +157,67 @@ header nav li.selected:last-child a {
     background-color: #FFCB05;
     padding: 1rem;
     margin: 0;
+    border-radius: 0.5rem;
+}
+
+.home-page .stages article {
+    background-color: #00274C;
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.home-page .stages article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px #FFCB05;
+}
+
+.home-page .stages a {
+    color: #FFCB05;
+}
+
+.home-page .programs article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.home-page .programs article .program-info,
+.home-page .programs article img {
+  grid-row: 1;
+}
+
+.home-page .programs .left .program-info {
+    grid-column: 1 / 2;
+}
+
+.home-page .programs .left img {
+    grid-column: 2 / -1;
+}
+
+.home-page .programs .right .program-info {
+    grid-column: 2 / -1;
+}
+
+.home-page .programs .right img {
+    grid-column: 1 / 2;
+}
+
+.home-page .programs hr {
+    border-top: 1px solid #00274C;
+    padding: 10px;
+}
+
+.home-page .newsletter {
+    margin-top: 2rem;
+    background-color: #FFCB05;
+    padding: 1rem;
+}
+
+.home-page .newsletter a:hover,
+.home-page .newsletter a:focus {
+    color: #00274C;
 }
 
 
@@ -178,6 +235,81 @@ header nav li.selected:last-child a {
     font-size: 1.5rem;
 }
 
+.prep-page section:not(:first-child) {
+    border-top: 3px solid #00274C;
+    padding-top: 1.5rem;
+}
+
+.prep-page .why ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    list-style: none;
+    text-align: center;
+}
+
+.prep-page .why li {
+    display: grid;
+    place-items: center;
+    background-color: #FFCB05;
+    padding: 0.8rem;
+    margin: 0;
+    border-radius: 0.5rem;
+    border: 1px solid #00274C;
+    color: #00274C;
+}
+
+.prep-page .where-to-start h2 {
+    padding-bottom: 1rem;
+}
+
+.prep-page .where-to-start ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    text-align: center;
+    gap: 1rem;
+}
+
+.prep-page .where-to-start li {
+    padding: 1rem 2rem;
+    background-color: #00274C;
+    border-radius: 0.5rem;
+}
+
+.prep-page .where-to-start a {
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+.prep-page .where-to-start a:hover,
+.prep-page .where-to-start a:focus {
+    color: #FFCB05;
+}
+
+.prep-page .where-to-start li:first-child {
+    grid-column: 1;
+}
+
+.prep-page .what-youll-do div {
+    background-color: #00274C;
+    color: #FFFFFF;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.prep-page .what-youll-do h4 {
+    color: #FFCB05;
+}
+
+.prep-page .what-youll-do ul {
+    padding-left: 1.75rem ;
+}
+
+.prep-page .what-youll-do li {
+    list-style: outside;
+}
+
 
 /* During your experience */
 .during-page main {
@@ -193,6 +325,12 @@ header nav li.selected:last-child a {
     font-size: 1.5rem;
 }
 
+.during-page section:not(:first-child) {
+    border-top: 3px solid #00274C;
+    padding-top: 1.5rem;
+}
+
+
 /* Wrap-up, Impact, & Next Steps */
 .wrapup-page main {
     color: #00274C;
@@ -205,6 +343,11 @@ header nav li.selected:last-child a {
 
 .wrapup-page h2 {
     font-size: 1.5rem;
+}
+
+.wrapup-page section:not(:first-child) {
+    border-top: 3px solid #00274C;
+    padding-top: 1.5rem;
 }
 
 
