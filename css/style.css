@@ -27,7 +27,7 @@ header {
 
 /* General rules */
 * img {
-    max-width: 100%;
+    width: 100%;
 }
 
 * iframe {
@@ -52,10 +52,133 @@ header {
     color: #FFCB05;
 }
 
+* h3 {
+    font-size: large;
+}
+
 
 /* Mobile styling */
 
-/* Header */
+/* Shared styling */
+
+.box-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    list-style: none;
+    text-align: center;
+}
+
+.box-6 li {
+    display: grid;
+    place-items: center;
+    background-color: #FFCB05;
+    padding: 0.8rem;
+    margin: 0;
+    border-radius: 0.5rem;
+    border: 1px solid #00274C;
+    color: #00274C;
+}
+
+.where-to-start h2 {
+    padding-bottom: 1rem;
+}
+
+.where-to-start ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    text-align: center;
+    gap: 1rem;
+}
+
+.where-to-start li {
+    padding: 1rem 2rem;
+    background-color: #00274C;
+    border-radius: 0.5rem;
+}
+
+.where-to-start a {
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+.where-to-start a:hover,
+.where-to-start a:focus {
+    color: #FFCB05;
+}
+
+.where-to-start li:first-child {
+    grid-column: 1;
+}
+
+.what-youll-do div {
+    background-color: #00274C;
+    color: #FFFFFF;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.what-youll-do h4 {
+    color: #FFCB05;
+}
+
+.what-youll-do ul {
+    padding-left: 1.75rem ;
+}
+
+.what-youll-do li {
+    list-style: outside;
+}
+
+.checklist {
+    display: grid;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 0 1rem;
+}
+
+.checklist li {
+    list-style: decimal inside;
+    background-color: #FFCB05;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.resources {
+    padding-top: 1rem;
+}
+
+.resources ul {
+    display: grid;
+    padding-left: 1rem;
+}
+
+.resources li {
+    list-style: none;
+}
+
+.box-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    list-style: none;
+    text-align: center;
+}
+
+.box-2-col li {
+    display: grid;
+    place-items: center;
+    background-color: #FFCB05;
+    padding: 0.8rem;
+    margin: 0;
+    border-radius: 0.5rem;
+    border: 1px solid #00274C;
+    color: #00274C;
+}
+
+
+/* Header specific styling */
 header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -127,7 +250,7 @@ header nav li.selected:last-child a {
 }
 
 
-/* Home */
+/* Home specific styling */
 .home-page main {
     color: #00274C;
     padding: 1.5rem;
@@ -221,7 +344,7 @@ header nav li.selected:last-child a {
 }
 
 
-/* Preparing for your experience */
+/* Prep specific styling */
 .prep-page main {
     color: #00274C;
     padding: 1.5rem;
@@ -240,85 +363,15 @@ header nav li.selected:last-child a {
     padding-top: 1.5rem;
 }
 
-.prep-page .why ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    list-style: none;
-    text-align: center;
-}
 
-.prep-page .why li {
-    display: grid;
-    place-items: center;
-    background-color: #FFCB05;
-    padding: 0.8rem;
-    margin: 0;
-    border-radius: 0.5rem;
-    border: 1px solid #00274C;
-    color: #00274C;
-}
-
-.prep-page .where-to-start h2 {
-    padding-bottom: 1rem;
-}
-
-.prep-page .where-to-start ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    list-style: none;
-    text-align: center;
-    gap: 1rem;
-}
-
-.prep-page .where-to-start li {
-    padding: 1rem 2rem;
-    background-color: #00274C;
-    border-radius: 0.5rem;
-}
-
-.prep-page .where-to-start a {
-    color:#FFFFFF;
-    text-decoration: none;
-}
-
-.prep-page .where-to-start a:hover,
-.prep-page .where-to-start a:focus {
-    color: #FFCB05;
-}
-
-.prep-page .where-to-start li:first-child {
-    grid-column: 1;
-}
-
-.prep-page .what-youll-do div {
-    background-color: #00274C;
-    color: #FFFFFF;
-    padding: 1.25rem;
-    border-radius: 0.5rem;
-}
-
-.prep-page .what-youll-do h4 {
-    color: #FFCB05;
-}
-
-.prep-page .what-youll-do ul {
-    padding-left: 1.75rem ;
-}
-
-.prep-page .what-youll-do li {
-    list-style: outside;
-}
-
-
-/* During your experience */
+/* During specific styling */
 .during-page main {
-    color: #00274C;
+    color: #00274c;
     padding: 1.5rem;
 }
 
 .during-page main * {
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
 }
 
 .during-page h2 {
@@ -326,12 +379,69 @@ header nav li.selected:last-child a {
 }
 
 .during-page section:not(:first-child) {
-    border-top: 3px solid #00274C;
+    border-top: 3px solid #00274c;
     padding-top: 1.5rem;
 }
 
+.during-page .project-rhythm {
+    display: grid;
+}
 
-/* Wrap-up, Impact, & Next Steps */
+.during-page .project-rhythm h3 {
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+.during-page .project-rhythm > div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    border: 2px solid #00274C;
+    border-radius: 0.5rem;
+}
+
+.during-page .project-rhythm h4 {
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.during-page .project-rhythm ul {
+    margin: 0;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    background-color: #00274C;
+    border-radius: 0.3rem;
+    color: #FFFFFF;
+}
+
+.during-page .project-rhythm li {
+    list-style: circle;
+}
+
+.during-page .featured-resources {
+    overflow-x: auto;
+}
+
+.during-page .featured-resources table {
+    text-align: left;
+}
+
+.during-page .featured-resources th,
+.during-page .featured-resources td {
+    padding: 0.75rem;
+    border: 1px solid #00274c;
+}
+
+.during-page .featured-resources th {
+    background-color: #00274c;
+    color: #fff;
+}
+
+.during-page .featured-resources tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+/* Wrap-up specific styling */
 .wrapup-page main {
     color: #00274C;
     padding: 1.5rem;
@@ -348,6 +458,32 @@ header nav li.selected:last-child a {
 .wrapup-page section:not(:first-child) {
     border-top: 3px solid #00274C;
     padding-top: 1.5rem;
+}
+
+.wrapup-page .complete-steps ol {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    list-style-position: inside;
+}
+
+.wrapup-page .complete-steps li {
+    padding: 1rem;
+    border: 2px solid #00274c;
+    border-radius: 0.5rem;
+    background-color: #f5f5f5;
+    color: #00274c;
+}
+
+.wrapup-page .complete-steps strong {
+    color: #00274c;
+    font-size: 1.1rem;
+}
+
+.wrapup-page .complete-steps li:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
 }
 
 
