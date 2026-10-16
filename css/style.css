@@ -423,6 +423,9 @@ header nav li.selected:last-child a {
 
 .during-page .featured-resources table {
     text-align: left;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
 }
 
 .during-page .featured-resources th,
