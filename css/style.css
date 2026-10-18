@@ -422,16 +422,18 @@ header nav li.selected:last-child a {
 }
 
 .during-page .featured-resources table {
-    text-align: left;
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
+    text-align: left;
 }
 
 .during-page .featured-resources th,
 .during-page .featured-resources td {
     padding: 0.75rem;
     border: 1px solid #00274c;
+    font-size: 0.75rem;
+    overflow-wrap: break-word;
 }
 
 .during-page .featured-resources th {
