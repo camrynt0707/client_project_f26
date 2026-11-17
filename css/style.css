@@ -52,14 +52,20 @@ header {
     color: #FFCB05;
 }
 
+* h2 {
+    font-size: 1.75rem;
+}
+
 * h3 {
-    font-size: large;
+    font-size: 1.5rem;
+}
+
+* h4 {
+    font-size: 1.25rem;
 }
 
 
 /* Mobile styling */
-
-/* Shared styling */
 
 .box-6 {
     display: grid;
@@ -133,16 +139,20 @@ header {
 
 .checklist {
     display: grid;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    gap: 0 1rem;
+    padding: 1.5rem;
+    background-color: #FFCB05;
+    border-radius: 0.5rem;
+    border: 2px solid #00274C;
 }
 
 .checklist li {
-    list-style: decimal inside;
-    background-color: #FFCB05;
-    padding: 1rem;
-    border-radius: 0.5rem;
+    list-style: decimal outside;
+    padding-left: 1rem;
+    margin-left: 1.5rem;
+}
+
+.checklist li::marker {
+    font-weight: bold;
 }
 
 .resources {
@@ -260,10 +270,6 @@ header nav li.selected:last-child a {
     margin-bottom: 1rem; 
 }
 
-.home-page h2 {
-    font-size: 1.5rem;
-}
-
 .home-page section:not(:first-child) {
     border-top: 3px solid #00274C;
     padding-top: 1.5rem;
@@ -354,10 +360,6 @@ header nav li.selected:last-child a {
     margin-bottom: 1rem; 
 }
 
-.prep-page h2 {
-    font-size: 1.5rem;
-}
-
 .prep-page section:not(:first-child) {
     border-top: 3px solid #00274C;
     padding-top: 1.5rem;
@@ -372,10 +374,6 @@ header nav li.selected:last-child a {
 
 .during-page main * {
     margin-bottom: 1rem;
-}
-
-.during-page h2 {
-    font-size: 1.5rem;
 }
 
 .during-page section:not(:first-child) {
@@ -456,10 +454,6 @@ header nav li.selected:last-child a {
     margin-bottom: 1rem; 
 }
 
-.wrapup-page h2 {
-    font-size: 1.5rem;
-}
-
 .wrapup-page section:not(:first-child) {
     border-top: 3px solid #00274C;
     padding-top: 1.5rem;
@@ -502,4 +496,10 @@ footer {
 
 footer a {
     color: #FFCB05;
+}
+
+
+/* Desktop styling */
+@media screen and (min-width: 1000) {
+
 }
