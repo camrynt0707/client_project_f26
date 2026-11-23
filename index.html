@@ -42,7 +42,7 @@
       <section class="benefits">
         <h2>Why Use This Resource?</h2>
 
-        <p>Real-world projects rarely follow a perfect plan. This site helps you find the right guidance when you need it, so you can spend less time earching for materials and more time learning, collaborating, and moving your project forward.
+        <p>Real-world projects rarely follow a perfect plan. This site helps you find the right guidance when you need it, so you can spend less time searching for materials and more time learning, collaborating, and moving your project forward.
         </p>
         <div class="reasons-to-use">
           <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
@@ -164,7 +164,10 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
     </footer>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
   </body>
 </html>

@@ -149,21 +149,91 @@
       <h3>Phase 3 Checklist</h3>
       <img class="checklist-image" src="images/client-checklist.jpg" alt="A student writes with a dry erase marker with her team.">
       <p>Throughout the project, confirm that your team is:</p>
-      <ol class="checklist">
-        <li>Applying appropriate human-centered research methods</li>
-        <li>Following applicable consent, privacy, and research requirements</li>
-        <li>Distinguishing observations from assumptions and interpretations</li>
-        <li>Translating findings into actionable insights</li>
-        <li>Maintaining a shared project plan</li>
-        <li>Assigning owners and deadlines to tasks</li>
-        <li>Monitoring milestones, risks, and dependencies</li>
-        <li>Sending regular progress updates</li>
-        <li>Gathering feedback at meaningful points</li>
-        <li>Documenting decisions and action items</li>
-        <li>Assessing new requests before accepting them</li>
-        <li>Updating the scope and timeline when plans change</li>
-        <li>Asking for support before issues become critical</li>
+      <ol class="checklist interactive-checklist" id="prep-phase3-checklist">
+          <li>
+          <label>
+            <input type="checkbox">
+            <span>Applying appropriate human-centered research methods</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Following applicable consent, privacy, and research requirements</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Distinguishing observations from assumptions and interpretations</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Translating findings into actionable insights</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Maintaining a shared project plan</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Assigning owners and deadlines to tasks</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Monitoring milestones, risks, and dependencies</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Sending regular progress updates</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Gathering feedback at meaningful points</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Documenting decisions and action items</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Assessing new requests before accepting them</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Updating the scope and timeline when plans change</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>Asking for support before issues become critical</span>
+          </label>
+        </li>
       </ol>
+
+      <div class="progress-div">
+      <label class="progress-label" for="phase3-progress">Phase 3 progress</label>
+      <progress id="phase3-progress" value="0" max="9"></progress>
+    </div>
     </article>
 
     <hr>
@@ -263,13 +333,42 @@
   <!-- Content taken & modified from UMGPT with the prompt, "Can you do a similar process of converting this content into a more engaging format for my website?" UMGPT. (2026). UMGPT ( GPT-5.6 Sol September 17th version) [Large language model]. -->
 </main>
 <footer>
-        <p>University of Michigan School of Information | <a href="https://www.si.umich.edu/programs/engaged-learning/about-engaged-learning-office">Engaged Learning Office </a></p>
-      <address>
-        <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
-      </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
-    </footer>
-    
+  <p>University of Michigan School of Information | <a href="https://www.si.umich.edu/programs/engaged-learning/about-engaged-learning-office">Engaged Learning Office </a></p>
+  <address>
+    <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
+  </address>
+  <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
+</footer>
+
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+
+  document.querySelectorAll(".interactive-checklist").forEach(function (checklist) {
+    const checkboxes = checklist.querySelectorAll('input[type="checkbox"]');
+    const section = checklist.closest(".checklist-section");
+    const progress = section.querySelector("progress");
+
+    const saved = JSON.parse(localStorage.getItem(checklist.id)) || [];
+
+    function updateProgress() {
+      progress.max = checkboxes.length;
+      progress.value = checklist.querySelectorAll("input:checked").length;
+    }
+
+    checkboxes.forEach(function (checkbox, index) {
+      checkbox.checked = saved[index] === true;
+
+      checkbox.addEventListener("change", function () {
+        saved[index] = checkbox.checked;
+        localStorage.setItem(checklist.id, JSON.stringify(saved));
+
+        updateProgress();
+      });
+    });
+
+    updateProgress();
+  });
+</script>
 </body>
 
 </html>

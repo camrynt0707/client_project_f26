@@ -293,7 +293,7 @@
         <article>
             <h3>Career Translation Checklist</h3>
             <p>After the project, confirm that you have:</p>
-            <ol class="checklist">
+            <ol class="checklist career">
                 <li>Written a personal reflection</li>
                 <li>Identified technical or transferable skills</li>
                 <li>Documented your individual contributions</li>
@@ -342,12 +342,16 @@
     <!-- Content taken & modified from UMGPT with the prompt, "Can you do the same process and make this wrap up content engaging for my website?" UMGPT. (2026). UMGPT ( GPT-5.6 Sol September 17th version) [Large language model]. -->
 </main>
 <footer>
-        <p>University of Michigan School of Information | <a href="https://www.si.umich.edu/programs/engaged-learning/about-engaged-learning-office">Engaged Learning Office </a></p>
-      <address>
-        <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
-      </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
-    </footer>
+    <p>University of Michigan School of Information | <a href="https://www.si.umich.edu/programs/engaged-learning/about-engaged-learning-office">Engaged Learning Office </a></p>
+    <address>
+    <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
+    </address>
+    <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
+</footer>
+
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
     
 </body>
 
